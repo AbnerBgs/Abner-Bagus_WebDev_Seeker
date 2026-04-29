@@ -1,0 +1,66 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-main-image {
+    width: 100%;
+    max-width: 592px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: #ffffff; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+}
+
+nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Eco Track */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #064E3B;
+}
+
+/* Login & Get Started Buttons */
+.btn-login {
+    background-color: transparent;
+    border:none;
+    color: #064E3B;
+    transition: all 0.3s ease;
+}
