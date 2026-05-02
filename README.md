@@ -31,21 +31,21 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 ## Struktur Project
 eco-track-project/
 
-├── app.js                  # Backend server (Express.js)
+├── app.js                      # Backend server (Express.js)
 
-├── package.json            # Metadata & daftar library (Express)
+├── package.json                # Metadata & daftar library (Express)
 
-├── README.md               # Penjelasan project
+├── README.md                   # Penjelasan project
 
-├── public/                 # Folder static files
+├── public/                     # Folder static files
 
-|   ├── background.jpg      # Gambar yang dipakai
+|     ├── background.jpg          # Gambar yang dipakai
 
-│   ├── index.html          # Halaman utama/home
+│     ├── index.html              # Halaman utama/home
 
-│   ├── main.js             # JavaScript utama untuk logika
+│     ├── main.js                 # JavaScript utama untuk logika
 
-│   ├── style.css           # CSS custom
+│     ├── style.css               # CSS custom
 
 
 
