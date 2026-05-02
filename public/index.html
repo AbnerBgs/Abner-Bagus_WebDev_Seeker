@@ -7,200 +7,387 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><title>Eco-Track</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Eco-Track</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="mainjs" href="main.js">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">Eco-Track</div>
-        <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Impact</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-        <div class="nav-buttons">
-            <button class="btn-login">Login</button>
-            <button class="btn-get-started">Get Started</button>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <span class="badge"> PIONNERING SUSTAINABILITY</span>
-            <h1>Welcome to Eco-Track: Stewardship Through Data.</h1>
-            <p>Measure your daily carbon footprint and take actionable steps toward environmental stewardship with
-                professional metrics and real-time insights.</p>
-            <div class="hero-cta">
-                <button class="btn-primary">Start Calculating</button>
-                <button class="btn-secondary">Learn More</button>
+    <section id="landing-page">
+        <nav>
+            <div class="logo">Eco-Track</div>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Impact</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="btn-login">Login</a>
+                <a href="#" class="btn-get-started">Get Started</a>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="logo.jpg" class="hero-main-image">
-        </div>
-    </header>
+        </nav>
 
-<section class="why-track">
-    <div class="container-why-track"> 
-        <div class="why-track-content">
-            <div class="why-track-text-side">
-                <span class="why-track-title">WHY TRACK?</span>
-                
-                <div class="carbon-alert">
-                    <div class="alert-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#b91c1c">
-                            <path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .3-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/>
+        <header class="hero">
+            <div class="hero-content">
+                <span class="badge"> PIONNERING SUSTAINABILITY</span>
+                <h1>Welcome to Eco-Track: Stewardship Through Data.</h1>
+                <p>Measure your daily carbon footprint and take actionable steps toward environmental stewardship with
+                    professional metrics and real-time insights.</p>
+                <div class="hero-cta">
+                    <a href="#calculator-view" onclick="openCalculator()" class="btn-primary">Start Calculating</a>
+                    <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="logo.jpg" class="hero-main-image">
+            </div>
+        </header>
+
+        <section class="why-track">
+            <div class="container-why-track">
+                <div class="why-track-content">
+                    <div class="why-track-text-side">
+                        <span class="why-track-title">WHY TRACK?</span>
+
+                        <div class="carbon-alert">
+                            <div class="alert-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"
+                                    fill="#b91c1c">
+                                    <path
+                                        d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .3-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z" />
+                                </svg>
+                            </div>
+                            <div class="alert-text">
+                                <h3>Carbon Alert</h3>
+                                <p>Global CO2 levels are at an all-time high. Individual stewardship is no longer
+                                    optional—it is essential.</p>
+                            </div>
+                        </div>
+
+                        <p class="description">
+                            The climate crisis is a complex data problem. By quantifying our impact, we bridge the gap
+                            between overwhelmed inaction and focused empowerment. Eco-Track provides the structured
+                            environment needed to monitor, manage, and mitigate your personal carbon legacy.
+                        </p>
+                    </div>
+
+                    <div class="why-track-grid">
+                        <div class="stonks-up">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M5 3V19H21V21H3V3H5ZM20.2929 6.29289L21.7071 7.70711L16 13.4142L13 10.415L8.70711 14.7071L7.29289 13.2929L13 7.58579L16 10.585L20.2929 6.29289Z">
+                                </path>
+                            </svg>
+                            <h3>Data Precision</h3>
+                            <p>Accurate calculations based on global climate models.</p>
+                        </div>
+                        <div class="earth">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16.0043 12.8777C15.6589 12.3533 15.4097 11.9746 14.4622 12.1248C12.6717 12.409 12.4732 12.7224 12.3877 13.2375L12.3636 13.3943L12.3393 13.5597C12.2416 14.2428 12.2453 14.5012 12.5589 14.8308C13.8241 16.1582 14.582 17.115 14.8116 17.6746C14.9237 17.9484 15.2119 18.7751 15.0136 19.5927C16.2372 19.1066 17.3156 18.3332 18.1653 17.3559C18.2755 16.9821 18.3551 16.5166 18.3551 15.9518V15.8472C18.3551 14.9247 18.3551 14.504 17.7031 14.1314C17.428 13.9751 17.2227 13.881 17.0582 13.8064C16.691 13.6394 16.4479 13.5297 16.1198 13.0499C16.0807 12.9928 16.0425 12.9358 16.0043 12.8777ZM12 3.83333C9.68259 3.83333 7.59062 4.79858 6.1042 6.34896C6.28116 6.47186 6.43537 6.64453 6.54129 6.88256C6.74529 7.34029 6.74529 7.8112 6.74529 8.22764C6.74488 8.55621 6.74442 8.8672 6.84992 9.09302C6.99443 9.40134 7.6164 9.53227 8.16548 9.64736C8.36166 9.68867 8.56395 9.73083 8.74797 9.78176C9.25405 9.92233 9.64554 10.3765 9.95938 10.7412C10.0896 10.8931 10.2819 11.1163 10.3783 11.1717C10.4286 11.1356 10.59 10.9608 10.6699 10.6735C10.7307 10.4547 10.7134 10.2597 10.6239 10.1543C10.0648 9.49445 10.0952 8.2232 10.268 7.75495C10.5402 7.01606 11.3905 7.07058 12.012 7.11097C12.2438 7.12589 12.4626 7.14023 12.6257 7.11976C13.2482 7.04166 13.4396 6.09538 13.575 5.91C13.8671 5.50981 14.7607 4.9071 15.3158 4.53454C14.3025 4.08382 13.1805 3.83333 12 3.83333Z">
+                                </path>
+                            </svg>
+                            <h3>Global Impact</h3>
+                            <p>Join a network of 500k+ stewards making daily differences.</p>
+                        </div>
+                        <div class="persen">
+                            <div class="stat-number">95%</div>
+                            <p>User accuracy in tracking monthly emissions.</p>
+                        </div>
+                        <div class="certified">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"
+                                fill="#064E3B">
+                                <path
+                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                            </svg>
+                            <h3>Certified</h3>
+                            <p>Aligned with international environmental standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container-how-it-works">
+                <div class="title-how-it-works">
+                    <h2>How It Works</h2>
+                    <p>Our three-step process simplifies complex environmental data into actionable life changes.</p>
+                </div>
+
+                <div class="grid-how-it-works">
+                    <div class="step">
+                        <div class="Transport">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M135.2 117.4l-26.1 74.6 293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 192c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-320 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 304a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+                                </svg>
+                            </div>
+                            <h3>Transport</h3>
+                            <p>Log your daily commutes, flights, and public transit use. We categorize fuel types and
+                                efficiency metrics automatically.</p>
+                            <div class="tag">
+                                <span class="mini-tag">EV READY</span>
+                                <span class="mini-tag">FLIGHT TRACKER</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="Energy">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z" />
+                                </svg>
+                            </div>
+                            <h3>Energy</h3>
+                            <p>Connect your utility providers or manually enter consumption data to see your household
+                                or office energy footprint.</p>
+                            <div class="tag">
+                                <span class="mini-tag">SMART CONNECT</span>
+                                <span class="mini-tag">RENWABLES</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="Results">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM144 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm144-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm80 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM512 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                                </svg>
+                            </div>
+                            <h3>Results</h3>
+                            <p>Receive detailed visualizations and a Stewardship Score, identifying exactly where you
+                                can reduce impact.</p>
+                            <div class="tag">
+                                <span class="mini-tag">DAILY REPORT</span>
+                                <span class="mini-tag">FORECASTING</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-preview">
+            <div class="container-dashboard">
+                <div class="dashboard-grid">
+                    <div class="real-time">
+                        <h3>Real-Time Impact Feedback</h3>
+                        <p>Our algorithm doesn't just show numbers; it shows progress. Watch your dashboard turn green
+                            as you reach sustainability milestones.</p>
+                        <div class="progress-container">
+                            <div class="progress-text">
+                                <span>YOUR DAILY PROGRESS</span>
+                                <span class="percentage" id="landing-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="landing-progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="smart-tip">
+                        <div class="tip-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                                <path
+                                    d="M292.9 384c7.3-22.3 21.9-42.5 38.4-59.9 32.7-34.4 52.7-80.9 52.7-132.1 0-106-86-192-192-192S0 86 0 192c0 51.2 20 97.7 52.7 132.1 16.5 17.4 31.2 37.6 38.4 59.9l201.7 0zM288 432l-192 0 0 16c0 44.2 35.8 80 80 80l32 0c44.2 0 80-35.8 80-80l0-16zM184 112c-39.8 0-72 32.2-72 72 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3 53.7-120 120-120 13.3 0 24 10.7 24 24s-10.7 24-24 24z" />
+                            </svg>
+                            <h3>Smart Tip</h3>
+                        </div>
+                        <p>Reducing your shower time by just 2 minutes saves 10 gallons of water.</p>
+                    </div>
+
+                    <div class="local-insights">
+                        <div class="local-content">
+                            <h3>Local Insights</h3>
+                            <p>View low-carbon routes and local community gardens near you.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-group">
+                        <div class="stat-card tons">
+                            <h3>12.4</h3>
+                            <p>TONS OFFSET</p>
+                        </div>
+                        <div class="stat-card trees">
+                            <h3>240</h3>
+                            <p>TREES SAVED</p>
+                        </div>
+                        <div class="stat-card lbs">
+                            <h3>850</h3>
+                            <p>LBS RECYCLED</p>
+                        </div>
+                        <div class="stat-card rating">
+                            <h3>A+</h3>
+                            <p>ECO RATING</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="ending">
+            <div class="ending-content">
+                <div class="ending-card">
+                    <h2>Ready to lead the change?</h2>
+                    <p>Join thousands of individuals taking data-driven steps toward a healthier planet today.</p>
+                    <a href="#calculator-view" onclick="openCalculator()" class="btn-calculate">Start Calculating
+                        Now</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h2 class="footer-logo">Eco-Track</h2>
+                    <p class="copyright">© 2024 Eco-Track. Stewardship through data..</p>
+                </div>
+
+                <div class="footer-middle">
+                    <nav class="footer-nav">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Resources</a>
+                    </nav>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M55.7 199.7l30.9 30.9c6 6 14.1 9.4 22.6 9.4l21.5 0c8.5 0 16.6 3.4 22.6 9.4l29.3 29.3c6 6 9.4 14.1 9.4 22.6l0 37.5c0 8.5 3.4 16.6 9.4 22.6l13.3 13.3c6 6 9.4 14.1 9.4 22.6l0 18.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-2.7c0-8.5 3.4-16.6 9.4-22.6l45.3-45.3c6-6 9.4-14.1 9.4-22.6l0-34.7c0-17.7-14.3-32-32-32l-82.7 0c-8.5 0-16.6-3.4-22.6-9.4l-16-16c-4.2-4.2-6.6-10-6.6-16 0-12.5 10.1-22.6 22.6-22.6l34.7 0c12.5 0 22.6-10.1 22.6-22.6 0-6-2.4-11.8-6.6-16l-19.7-19.7C242 130 240 125.1 240 120s2-10 5.7-13.7l17.3-17.3c5.8-5.8 9.1-13.7 9.1-21.9 0-7.2-2.4-13.7-6.4-18.9-3.2-.1-6.4-.2-9.6-.2-95.4 0-175.7 64.2-200.3 151.7zM464 256c0-34.6-8.4-67.2-23.4-95.8-6.4 .9-12.7 3.9-17.9 9.1l-13.4 13.4c-6 6-9.4 14.1-9.4 22.6l0 34.7c0 17.7 14.3 32 32 32l24.1 0c2.5 0 5-.3 7.3-.8 .4-5 .5-10.1 .5-15.2zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M351.9 280l-190.9 0c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zM160.9 232l190.9 0C349 167.5 334.7 108.1 314.4 64.6 303 40.2 290.7 22.8 279.3 12.2 268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4zm-48 0C116.4 146.4 138.5 66.9 170.8 14.7 78.7 47.3 10.9 131.2 1.5 232l111.4 0zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3L1.5 280zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3l-111.4 0zm111.4-48C501.9 131.2 434.1 47.3 342 14.7 374.3 66.9 396.4 146.4 399.9 232l111.4 0z" />
                         </svg>
                     </div>
-                    <div class="alert-text">
-                        <h3>Carbon Alert</h3>
-                        <p>Global CO2 levels are at an all-time high. Individual stewardship is no longer optional—it is essential.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator-view" style="display: none;">
+        <div class="calc-container">
+            <header class="calc-header">
+                <button onclick="closeCalculator()" class="btn-back">← Dashboard</button>
+                <h1>Carbon Calculator</h1>
+                <p>Measure your daily footprint and take actionable steps toward environmental  stewardship. Every small change contributes to a healthier planet.</p>
+            </header>
+
+            <div class="calc-grid">
+                <div class="calc-inputs">
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon-bg green">🚗</span>
+                            <h3>Transportation</h3>
+                        </div>
+                        <div class="form-group">
+                            <label>DISTANCE TRAVELED (KM)</label>
+                            <input type="number" id="distance" placeholder="Enter distance">
+                        </div>
+                        <div class="form-group">
+                            <label>VEHICLE TYPE</label>
+                            <div class="vehicle-toggle">
+                                <button type="button" class="toggle-btn active" onclick="selectVehicle(this)">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                            <path
+                                                d="M280 16c-13.3 0-24 10.7-24 24s10.7 24 24 24l56.6 0 22.5 48.7-95.1 71.3c-33.4-25.1-75-40-120-40l-56 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l56 0c78.5 0 143.2 59.6 151.2 136l-25.4 0c-11.2-59.2-63.3-104-125.8-104-70.7 0-128 57.3-128 128S73.3 480 144 480c62.5 0 114.5-44.8 125.8-104l50.2 0c13.3 0 24-10.7 24-24l0-22.5c0-45.1 25.7-85.4 65.5-107.7l12.1 26.1c-32.4 23.2-53.5 61.2-53.5 104.1 0 70.7 57.3 128 128 128s128-57.3 128-128-57.3-128-128-128c-10.7 0-21 1.3-30.9 3.8L433.8 160 488 160c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-53.3 0c-6.9 0-13.7 2.2-19.2 6.4l-17.1 12.8-24.6-53.3C369.9 21.4 361.4 16 352 16l-72 0zM445.8 300.4l28.4 61.6c5.6 12 19.8 17.3 31.8 11.7s17.3-19.8 11.7-31.8l-28.5-61.6c2.2-.2 4.4-.3 6.7-.3 39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72c0-20.2 8.3-38.5 21.8-51.6zM144 424c-39.8 0-72-32.2-72-72s32.2-72 72-72c31.3 0 58 20 67.9 48L144 328c-13.3 0-24 10.7-24 24s10.7 24 24 24l67.9 0c-9.9 28-36.6 48-67.9 48z" />
+                                        </svg>
+                                    </span>
+                                    Motorcycle
+                                </button>
+
+                                <button type="button" class="toggle-btn" onclick="selectVehicle(this)">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M135.2 117.4l-26.1 74.6 293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 192c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-320 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 304a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+                                        </svg>
+                                    </span>
+                                    Car
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <span class="icon-bg orange">⚡</span>
+                            <h3>Energy Usage</h3>
+                        </div>
+                        <div class="grid-inputs">
+                            <div class="form-group">
+                                <label>AC HOURS / DAY</label>
+                                <input type="number" id="acInput" placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label>LAPTOP HOURS / DAY</label>
+                                <input type="number" id="laptopInput" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-actions">
+                        <button class="btn-calculate" onclick="hitungEmisiSekarang()">Calculate ↗</button>
+                        <button class="btn-reset">↺ Reset</button>
                     </div>
                 </div>
 
-                <p class="description">
-                    The climate crisis is a complex data problem. By quantifying our impact, we bridge the gap between overwhelmed inaction and focused empowerment. Eco-Track provides the structured environment needed to monitor, manage, and mitigate your personal carbon legacy.
-                </p>
-            </div>
+                <div class="calc-sidebar">
+                    <div class="impact-card">
+                        <h3>Your Impact</h3>
+                        <p>Calculate your usage to see your environmental footprint results here.</p>
 
-            <div class="why-track-grid">
-                <div class="stonks-up">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3V19H21V21H3V3H5ZM20.2929 6.29289L21.7071 7.70711L16 13.4142L13 10.415L8.70711 14.7071L7.29289 13.2929L13 7.58579L16 10.585L20.2929 6.29289Z"></path></svg>
-                    <h3>Data Precision</h3>
-                    <p>Accurate calculations based on global climate models.</p>
-                </div>
-                <div class="earth">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16.0043 12.8777C15.6589 12.3533 15.4097 11.9746 14.4622 12.1248C12.6717 12.409 12.4732 12.7224 12.3877 13.2375L12.3636 13.3943L12.3393 13.5597C12.2416 14.2428 12.2453 14.5012 12.5589 14.8308C13.8241 16.1582 14.582 17.115 14.8116 17.6746C14.9237 17.9484 15.2119 18.7751 15.0136 19.5927C16.2372 19.1066 17.3156 18.3332 18.1653 17.3559C18.2755 16.9821 18.3551 16.5166 18.3551 15.9518V15.8472C18.3551 14.9247 18.3551 14.504 17.7031 14.1314C17.428 13.9751 17.2227 13.881 17.0582 13.8064C16.691 13.6394 16.4479 13.5297 16.1198 13.0499C16.0807 12.9928 16.0425 12.9358 16.0043 12.8777ZM12 3.83333C9.68259 3.83333 7.59062 4.79858 6.1042 6.34896C6.28116 6.47186 6.43537 6.64453 6.54129 6.88256C6.74529 7.34029 6.74529 7.8112 6.74529 8.22764C6.74488 8.55621 6.74442 8.8672 6.84992 9.09302C6.99443 9.40134 7.6164 9.53227 8.16548 9.64736C8.36166 9.68867 8.56395 9.73083 8.74797 9.78176C9.25405 9.92233 9.64554 10.3765 9.95938 10.7412C10.0896 10.8931 10.2819 11.1163 10.3783 11.1717C10.4286 11.1356 10.59 10.9608 10.6699 10.6735C10.7307 10.4547 10.7134 10.2597 10.6239 10.1543C10.0648 9.49445 10.0952 8.2232 10.268 7.75495C10.5402 7.01606 11.3905 7.07058 12.012 7.11097C12.2438 7.12589 12.4626 7.14023 12.6257 7.11976C13.2482 7.04166 13.4396 6.09538 13.575 5.91C13.8671 5.50981 14.7607 4.9071 15.3158 4.53454C14.3025 4.08382 13.1805 3.83333 12 3.83333Z"></path></svg>
-                    <h3>Global Impact</h3>
-                    <p>Join a network of 500k+ stewards making daily differences.</p>
-                </div>
-                <div class="persen">
-                    <div class="stat-number">95%</div>
-                    <p>User accuracy in tracking monthly emissions.</p>
-                </div>
-                <div class="certified">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="#064E3B">
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                    </svg>
-                    <h3>Certified</h3>
-                    <p>Aligned with international environmental standards.</p>
+                        <div class="awaiting-data">
+                            <div class="circle-loader">
+                                <div class="dots">...</div>
+                            </div>
+                            <span>AWAITING DATA</span>
+                        </div>
+
+                        <div class="calculator-progress-container">
+                            <div id="calculator-progress-bar"></div>
+                            <div class="progress-labels">
+                                <span id="calc-label-current">0 KG CO2e</span>
+                                <span>DAILY LIMIT: 15 KG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="eco-tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor">
+                                    <path
+                                        d="M296.5 291.1C321 265.2 336 230.4 336 192 336 112.5 271.5 48 192 48S48 112.5 48 192c0 38.4 15 73.2 39.5 99.1 21.3 22.4 44.9 54 53.3 92.9l102.4 0c8.4-39 32-70.5 53.3-92.9zm34.8 33C307.7 349 288 379.4 288 413.7l0 18.3c0 44.2-35.8 80-80 80l-32 0c-44.2 0-80-35.8-80-80l0-18.3C96 379.4 76.3 349 52.7 324.1 20 289.7 0 243.2 0 192 0 86 86 0 192 0S384 86 384 192c0 51.2-20 97.7-52.7 132.1zM144 184c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6 39.4-88 88-88 13.3 0 24 10.7 24 24s-10.7 24-24 24c-22.1 0-40 17.9-40 40z" />
+                                </svg>
+                            </div>
+                            <strong>Eco-Tip</strong>
+                        </div>
+                        <p>Switching to LED bulbs can reduce your energy consumption by up to 75% compared to
+                            incandescent lighting.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="how-it-works">
-    <div class="container-how-it-works">
-        <div class="title-how-it-works">
-            <h2>How It Works</h2>
-            <p>Our three-step process simplifies complex environmental data into actionable life changes.</p>
-        </div>
-
-        <div class="grid-how-it-works">
-            <div class="step">
-                <div class="Transport">
-                    <div class="icon"> 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4l-26.1 74.6 293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 192c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-320 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 304a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
-                    </div>
-                    <h3>Transport</h3>
-                    <p>Log your daily commutes, flights, and public transit use. We categorize fuel types and efficiency metrics automatically.</p>
-                    <div class="tag">
-                        <span class="mini-tag">EV READY</span>
-                        <span class="mini-tag">FLIGHT TRACKER</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="Energy">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z"/></svg>
-                    </div>
-                    <h3>Energy</h3>
-                    <p>Connect your utility providers or manually enter consumption data to see your household or office energy footprint.</p>
-                    <div class="tag">
-                        <span class="mini-tag">SMART CONNECT</span>
-                        <span class="mini-tag">RENWABLES</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="Results">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM144 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm144-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm80 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM512 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
-                    </div>
-                    <h3>Results</h3>
-                    <p>Receive detailed visualizations and a Stewardship Score, identifying exactly where you can reduce impact.</p>
-                    <div class="tag">
-                        <span class="mini-tag">DAILY REPORT</span>
-                        <span class="mini-tag">FORECASTING</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="dashboard-preview">
-    <div class="container-dashboard">
-        <div class="dashboard-grid">
-            <div class="real-time">
-                <h3>Real-Time Impact Feedback</h3>
-                <p>Our algorithm doesn't just show numbers; it shows progress. Watch your dashboard turn green as you reach sustainability milestones.</p>
-                <div class="progress-container">
-                    <div class="progress-text">
-                        <span>YOUR MONTHLY PROGRESS</span>
-                        <span class="percentage">72%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 72%;"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="smart-tip">
-                <div class="tip-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M292.9 384c7.3-22.3 21.9-42.5 38.4-59.9 32.7-34.4 52.7-80.9 52.7-132.1 0-106-86-192-192-192S0 86 0 192c0 51.2 20 97.7 52.7 132.1 16.5 17.4 31.2 37.6 38.4 59.9l201.7 0zM288 432l-192 0 0 16c0 44.2 35.8 80 80 80l32 0c44.2 0 80-35.8 80-80l0-16zM184 112c-39.8 0-72 32.2-72 72 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-66.3 53.7-120 120-120 13.3 0 24 10.7 24 24s-10.7 24-24 24z"/></svg>
-                    <h3>Smart Tip</h3>
-                </div>
-                <p>Reducing your shower time by just 2 minutes saves 10 gallons of water.</p>
-            </div>
-
-            <div class="local-insights">
-                <div class="local-content">
-                    <h3>Local Insights</h3>
-                    <p>View low-carbon routes and local community gardens near you.</p>
-                </div>
-            </div>
-
-            <div class="stats-group">
-                <div class="stat-card tons">
-                    <h3>12.4</h3>
-                    <p>TONS OFFSET</p>
-                </div>
-                <div class="stat-card trees">
-                    <h3>240</h3>
-                    <p>TREES SAVED</p>
-                </div>
-                <div class="stat-card lbs">
-                    <h3>850</h3>
-                    <p>LBS RECYCLED</p>
-                </div>
-                <div class="stat-card rating">
-                    <h3>A+</h3>
-                    <p>ECO RATING</p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
