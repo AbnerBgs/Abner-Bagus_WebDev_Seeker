@@ -28,5 +28,16 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Data Persistence** — input dan centang action plan tersimpan di localStorage, tidak hilang saat reload
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
+project-root/
+├── app.js               # Express Server (Pusat kendali backend)
+├── package.json         # Metadata & daftar library (Express)
+└── public/              # Folder file statis yang diakses user
+    ├── background.jpg   # Gambar yang dipakai
+    ├── index.html       # Halaman utama aplikasi
+    ├── main.js          # Logika kalkulator & manipulasi DOM
+    ├── style.css        # Desain dan tata letak aplikasi
+    └── pages/           # Folder halaman tambahan (jika ada)
+
+
 ## Tantangan yang Dihadapi
-Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic javascript nya karena masih rada asing untuk saya, oleh karena itu saya menonton video youtube, bertanya pada AI, bertanya pada teman tentang logic javacsriptnya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an. 
+Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic javascript nya karena masih belum familiar untuk saya, oleh karena itu saya menonton video youtube, bertanya pada AI, bertanya pada teman tentang logic javacsriptnya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an. 
