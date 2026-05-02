@@ -436,7 +436,7 @@ nav ul li a:hover {
     height: 18px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 999px;
-    overflow: hidden;
+    overflow: hidden;  
 }
 
 .progress-fill {
@@ -699,6 +699,12 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+.icon-bg.orange svg {
+    width: 20px;
+    height: 20px;
+    fill: #F97316; 
+}
+
 .icon-bg.green { background: none; }
 .icon-bg.orange { background: none; }
 
@@ -760,7 +766,7 @@ input[type="number"] {
 
 /* Impact Calculate */
 .impact-card {
-    background-image: linear-gradient(rgba(17, 38, 17, 0.8), rgba(17, 38, 17, 0.8)), url('impact.jpg');
+    background-color: #064E3B;
     background-size: cover;      
     background-position: center;  
     background-repeat: no-repeat;
@@ -769,6 +775,8 @@ input[type="number"] {
     padding: 40px 30px;
     text-align: center;
     overflow: hidden; 
+    border: 2px solid transparent; 
+    transition: bacSkground-color 0.5s ease, border-color 0.5s ease;
 }
 
 .circle-loader {
@@ -854,4 +862,406 @@ input[type="number"] {
     font-weight: 600;
     cursor: pointer;
     margin-left: 20px;
+}
+
+.btn-reset svg {
+    width: 16px;
+    height: 16px;
+    fill: #4B5563;
+    transition: fill 0.2s ease;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 100;
+}
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #064E3B;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    /* ── Navbar ── */
+    nav {
+        padding: 14px 5%;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    nav ul,
+    .nav-buttons { display: none; }
+
+    .hamburger { display: flex; }
+
+    /* Menu mobile */
+    nav.open ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0;
+        margin: 0;
+        list-style: none;
+        order: 3;
+    }
+    nav.open ul li a {
+        display: block;
+        padding: 12px 0;
+        border-top: 1px solid #f0f0f0;
+        font-size: 15px;
+    }
+    nav.open .nav-buttons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        order: 4;
+        padding: 12px 0 4px;
+        border-top: 1px solid #f0f0f0;
+        gap: 12px;
+    }
+
+    /* Hero */
+    .hero {
+        flex-direction: column;
+        padding: 32px 5%;
+        gap: 24px;
+        text-align: center;
+    }
+    .hero-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .hero-image { width: 100%; }
+    .hero-main-image { max-width: 100%; border-radius: 16px; }
+    .hero-content h1 { font-size: 24px; }
+
+    /* Why Track */
+    .why-track { padding: 48px 0; }
+    .why-track-content { grid-template-columns: 1fr; gap: 24px; }
+    .why-track-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .earth  { margin-top: 0; }
+    .certified { margin-top: 0; }
+    .stonks-up h3, .earth h3, .certified h3 { font-size: 16px; }
+    .stonks-up p,  .earth p,  .persen p, .certified p { font-size: 13px; }
+    .stat-number { font-size: 32px; }
+
+    /* How It Works */
+    .how-it-works { padding: 48px 0; }
+    .grid-how-it-works { grid-template-columns: 1fr; gap: 16px; }
+    .step { padding: 20px 16px; }
+
+    /* Dashboard */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .real-time  { grid-column: span 1; padding: 28px 20px; }
+    .real-time h3 { font-size: 20px; }
+    .smart-tip  { grid-column: span 1; padding: 24px 20px; height: auto; }
+    .local-insights { grid-column: span 1; grid-row: auto; min-height: 200px; }
+    .stats-group {
+        grid-column: span 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .stat-card h3 { font-size: 28px; }
+
+    /* Ending */
+    .ending { padding: 48px 16px; }
+    .ending-card {
+        padding: 48px 24px;
+        border-radius: 24px;
+    }
+    .ending-card h2 { font-size: 22px; }
+    .ending-card p  { font-size: 14px; }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+    }
+    .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    /* Calculator */
+    #calculator-view { padding-top: 24px; }
+    .calc-container { padding: 20px 16px; }
+
+    .calc-header { text-align: center; }
+    .calc-header h1 { font-size: 22px; }
+    .calc-header p  { font-size: 13px; }
+
+    .calc-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Tombol calculate & reset */
+    .calc-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .btn-calculate {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+    .btn-reset {
+        margin-left: 0;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Vehicle toggle */
+    .toggle-btn { padding: 10px 8px; font-size: 13px; gap: 6px; }
+
+    /* Input number */
+    input[type="number"] { box-sizing: border-box; }
+
+    /* Sidebar kalkulator */
+    .calc-sidebar { margin-top: 0; }
+    .impact-card  { padding: 28px 20px; }
+    .eco-tip-card { padding: 20px 16px; }
+}
+/* Action Plan */
+#action-plan {
+    padding: 0 0 60px 0;
+}
+
+.action-plan-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.action-plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.action-plan-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #064E3B;
+    margin-bottom: 4px;
+}
+
+.action-plan-header p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.action-plan-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    min-width: 220px;
+}
+
+.ap-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.ap-progress-track {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.ap-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #4ade80;
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ap-progress-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* Grid tip cards */
+.tip-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1.5px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s, transform 0.15s;
+    user-select: none;
+}
+
+.tip-card:hover {
+    border-color: #94F990;
+    transform: translateY(-1px);
+}
+
+.tip-card.done {
+    background: #f0fdf4;
+    border-color: #86efac;
+}
+
+.tip-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    border: 2px solid #d1d5db;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s;
+    margin-top: 1px;
+    background: #fff;
+}
+
+.tip-card.done .tip-checkbox {
+    background: #22c55e;
+    border-color: #22c55e;
+    color: #fff;
+}
+
+.tip-checkmark {
+    display: none;
+    width: 12px;
+    height: 12px;
+}
+
+.tip-card.done .tip-checkmark {
+    display: block;
+}
+
+.tip-body {
+    flex: 1;
+}
+
+.tip-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    transition: color 0.25s;
+    line-height: 1.4;
+}
+
+.tip-card.done .tip-name {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.tip-desc {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 3px;
+    line-height: 1.5;
+}
+
+.tip-card.done .tip-desc {
+    color: #d1d5db;
+}
+
+.tip-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.badge-green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge-amber {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+/* Motivation bar */
+.ap-motivation {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+    transition: all 0.4s ease;
+}
+
+.ap-mot-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.ap-mot-text {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.ap-mot-text strong {
+    color: #064E3B;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .action-plan-content { padding: 0 16px; }
+    .tip-cards-grid { grid-template-columns: 1fr; }
+    .action-plan-header { flex-direction: column; }
+    .action-plan-meta { align-items: flex-start; width: 100%; }
 }

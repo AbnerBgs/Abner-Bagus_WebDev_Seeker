@@ -1,0 +1,32 @@
+# Eco-Track — Abner Bagus
+
+## Tentang Project
+Eco-Track adalah aplikasi web yang membantu pengguna mengukur jejak karbon harian mereka berdasarkan aktivitas transportasi dan penggunaan energi. Tujuannya adalah meningkatkan kesadaran lingkungan melalui visualisasi data emisi yang interaktif dan personal.
+
+## Masalah Iklim yang Ingin Disoroti
+Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mereka terhadap emisi karbon. Eco-Track hadir untuk menjawab pertanyaan "seberapa banyak CO2 yang aku hasilkan hari ini?" dengan cara yang mudah dipahami dan mendorong perubahan perilaku nyata melalui fitur Action Plan yang interaktif.
+
+## Jalur Spesialisasi yang Dipilih
+
+- [x] A1. Real-time UI Feedback 
+- [x] A2. Interactive Tips (Action Plan)
+- [ ] A3. Dynamic Result Display
+- [ ] B1. Static File Serving
+- [ ] B2. The Carbon API
+- [ ] B3. Smart Validation
+
+## Cara Menjalankan Project
+1. Clone/extract project ini
+2. Jalankan `npm install` (jika ada backend)
+3. Jalankan dengan `node index.js` atau buka `public/index.html` langsung di browser
+
+## Fitur Utama
+- **Carbon Calculator** — hitung emisi harian berdasarkan jarak tempuh kendaraan, jam AC, dan jam laptop
+- **Real-time Progress Bar** — bar kalkulator berubah warna (hijau/kuning/merah) sesuai total emisi
+- **Monthly Progress** — bar di landing page terakumulasi otomatis per bulan dari localStorage
+- **Action Plan Checklist** — 5 aksi nyata yang bisa dicentang, dengan pesan motivasi random per poin
+- **Data Persistence** — input dan centang action plan tersimpan di localStorage, tidak hilang saat reload
+- **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
+
+## Tantangan yang Dihadapi
+Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic javascript nya karena masih rada asing untuk saya, oleh karena itu saya menonton video youtube, bertanya pada AI, bertanya pada teman tentang logic javacsriptnya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an. 

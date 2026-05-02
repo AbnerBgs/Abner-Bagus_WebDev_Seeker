@@ -11,7 +11,7 @@
         rel="stylesheet">
     <title>Eco-Track</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="mainjs" href="main.js">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -186,8 +186,8 @@
                             as you reach sustainability milestones.</p>
                         <div class="progress-container">
                             <div class="progress-text">
-                                <span>YOUR DAILY PROGRESS</span>
-                                <span class="percentage" id="landing-percentage">0%</span>
+                                <span>YOUR MONTHLY PROGRESS</span>
+                                <span id="landing-total-label" style="font-size:11px;opacity:0.7;">0 / 450 KG CO2e</span><span class="percentage" id="landing-percentage">0%</span>
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" id="landing-progress-fill" style="width: 0%;"></div>
@@ -292,7 +292,9 @@
                 <div class="calc-inputs">
                     <div class="card">
                         <div class="card-title">
-                            <span class="icon-bg green">🚗</span>
+                            <span class="icon-bg green">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M147 106.7l-29.8 85.3 122.9 0 0-96-77.9 0c-6.8 0-12.9 4.3-15.1 10.7zM48.6 193.9L86.5 85.6C97.8 53.5 128.1 32 162.1 32L360 32c25.2 0 48.9 11.9 64 32l96.2 128.3C587.1 196.5 640 252.1 640 320l0 16c0 35.3-28.7 64-64 64l-16.4 0c-4 44.9-41.7 80-87.6 80s-83.6-35.1-87.6-80l-144.7 0c-4 44.9-41.7 80-87.6 80s-83.6-35.1-87.6-80l-.4 0c-35.3 0-64-28.7-64-64l0-80c0-30.1 20.7-55.3 48.6-62.1zM440 192l-67.2-89.6c-3-4-7.8-6.4-12.8-6.4l-72 0 0 96 152 0zM152 432a40 40 0 1 0 0-80 40 40 0 1 0 0 80zm360-40a40 40 0 1 0 -80 0 40 40 0 1 0 80 0z"/></svg>
+                            </span>
                             <h3>Transportation</h3>
                         </div>
                         <div class="form-group">
@@ -327,7 +329,9 @@
 
                     <div class="card">
                         <div class="card-title">
-                            <span class="icon-bg orange">⚡</span>
+                            <span class="icon-bg orange">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z"/></svg>
+                            </span>
                             <h3>Energy Usage</h3>
                         </div>
                         <div class="grid-inputs">
@@ -344,12 +348,13 @@
 
                     <div class="calc-actions">
                         <button class="btn-calculate" onclick="hitungEmisiSekarang()">Calculate ↗</button>
-                        <button class="btn-reset">↺ Reset</button>
+                        <button class="btn-reset" onclick="resetCalculator()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c-56.8 0-107.9 24.7-143.1 64l47.1 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 192c-17.7 0-32-14.3-32-32L0 32C0 14.3 14.3 0 32 0S64 14.3 64 32l0 54.7C110.9 33.6 179.5 0 256 0 397.4 0 512 114.6 512 256S397.4 512 256 512c-87 0-163.9-43.4-210.1-109.7-10.1-14.5-6.6-34.4 7.9-44.6s34.4-6.6 44.6 7.9c34.8 49.8 92.4 82.3 157.6 82.3 106 0 192-86 192-192S362 64 256 64z"/></svg>Reset</button>
                     </div>
                 </div>
 
                 <div class="calc-sidebar">
-                    <div class="impact-card">
+                    <div id="impact-card" class="impact-card">
                         <h3>Your Impact</h3>
                         <p>Calculate your usage to see your environmental footprint results here.</p>
 
@@ -380,11 +385,97 @@
                             <strong>Eco-Tip</strong>
                         </div>
                         <p>Switching to LED bulbs can reduce your energy consumption by up to 75% compared to
-                            incandescent lighting.</p>
+                        incandescent lighting.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <section id="action-plan" style="display:none;">
+            <div class="action-plan-content">
+
+                <div class="action-plan-header">
+                    <div>
+                        <h2>Action Plan</h2>
+                        <p>Real actions you can take today to reduce emissions</p>
+                    </div>
+                    <div class="action-plan-meta">
+                        <div class="ap-progress-row">
+                            <div class="ap-progress-track">
+                                <div class="ap-progress-fill" id="ap-progress-fill"></div>
+                            </div>
+                            <span class="ap-progress-label" id="ap-progress-label">0 / 5 completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-cards-grid">
+
+                    <div class="tip-card" data-id="0" onclick="toggleTip(this)">
+                        <div class="tip-checkbox">
+                            <svg class="tip-checkmark" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="tip-body">
+                            <div class="tip-name">Ride a bike or walk</div>
+                            <div class="tip-desc">For distances &lt; 3 km, skip motorized vehicles</div>
+                        </div>
+                        <span class="tip-badge badge-green">−1.2 kg</span>
+                    </div>
+
+                    <div class="tip-card" data-id="1" onclick="toggleTip(this)">
+                        <div class="tip-checkbox">
+                            <svg class="tip-checkmark" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="tip-body">
+                            <div class="tip-name">Reduce AC by 1 hour per day</div>
+                            <div class="tip-desc">Set a timer or increase the temperature to 26°C</div>
+                        </div>
+                        <span class="tip-badge badge-amber">−0.5 kg</span>
+                    </div>
+
+                    <div class="tip-card" data-id="2" onclick="toggleTip(this)">
+                        <div class="tip-checkbox">
+                            <svg class="tip-checkmark" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="tip-body">
+                            <div class="tip-name">Unplug the charger when not in use</div>
+                            <div class="tip-desc">Standby mode still consumes electricity</div>
+                        </div>
+                        <span class="tip-badge badge-green">−0.1 kg</span>
+                    </div>
+
+                    <div class="tip-card" data-id="3" onclick="toggleTip(this)">
+                        <div class="tip-checkbox">
+                            <svg class="tip-checkmark" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="tip-body">
+                            <div class="tip-name">Turn off lights when leaving a room</div>
+                            <div class="tip-desc">Small habits, big impact over time</div>
+                        </div>
+                        <span class="tip-badge badge-green">−0.05 kg</span>
+                    </div>
+
+                    <div class="tip-card" data-id="4" onclick="toggleTip(this)">
+                        <div class="tip-checkbox">
+                            <svg class="tip-checkmark" viewBox="0 0 12 12"><path d="M2 6l3 3 5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="tip-body">
+                            <div class="tip-name">Reduce meat consumption to 1x this week</div>
+                            <div class="tip-desc">Meat production is one of the largest emitters of greenhouse gases</div>
+                        </div>
+                        <span class="tip-badge badge-amber">−2.5 kg</span>
+                    </div>
+
+                </div>
+
+                <div class="ap-motivation" id="ap-motivation">
+                    <span class="ap-mot-icon" id="ap-mot-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M512 32C512 140.1 435.4 230.3 333.6 251.4 325.7 193.3 299.6 141 261.1 100.5 301.2 40 369.9 0 448 0l32 0c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64l32 0c123.7 0 224 100.3 224 224l0 192c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160C100.3 320 0 219.7 0 96z"/></svg></span>
+                    <div class="ap-mot-text" id="ap-mot-text"><strong>Start with one small step.</strong> Every small action makes a real difference.</div>
+                </div>
+
+            </div>
+        </section>
+
     </section>
 
     <script src="main.js"></script>
