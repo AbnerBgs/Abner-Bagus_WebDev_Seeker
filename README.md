@@ -37,7 +37,6 @@ project-root/
     ├── index.html       # Halaman utama aplikasi
     ├── main.js          # Logika kalkulator & manipulasi DOM
     ├── style.css        # Desain dan tata letak aplikasi
-    └── pages/           # Folder halaman tambahan (jika ada)
 
 
 ## Tantangan yang Dihadapi
