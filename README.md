@@ -29,6 +29,7 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
 ## Struktur Project
+<<<<<<< HEAD
 
 ```
 eco-track-project/
@@ -41,6 +42,29 @@ eco-track-project/
     ├── style.css        # Desain dan tata letak aplikasi
     └── background.jpg   # Gambar background
 ```
+=======
+eco-track-project/
+
+├── app.js                      # Backend server (Express.js)
+
+├── package.json                # Metadata & daftar library (Express)
+
+├── README.md                   # Penjelasan project
+
+├── public/                     # Folder static files
+
+|     ├── background.jpg          # Gambar yang dipakai
+
+│     ├── index.html              # Halaman utama/home
+
+│     ├── main.js                 # JavaScript utama untuk logika
+
+│     ├── style.css               # CSS custom
+
+
+
+
+>>>>>>> de4c1b5ce48452933de62cfa256ca0cf642ecf2f
 
 ## Tantangan yang Dihadapi
 Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic JavaScript karena masih belum familiar untuk saya, oleh karena itu saya menonton video YouTube, bertanya pada AI, dan bertanya pada teman tentang logic JavaScript-nya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an.
