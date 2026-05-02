@@ -29,7 +29,6 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
 ## Struktur Project
-<<<<<<< HEAD
 
 ```
 eco-track-project/
