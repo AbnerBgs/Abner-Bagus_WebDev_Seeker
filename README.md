@@ -17,8 +17,8 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 
 ## Cara Menjalankan Project
 1. Clone/extract project ini
-2. Jalankan `npm install` (jika ada backend)
-3. Jalankan dengan `node index.js` atau buka `public/index.html` langsung di browser
+2. Jalankan `npm install`
+3. Jalankan dengan `node app.js` atau buka `public/index.html` langsung di browser
 
 ## Fitur Utama
 - **Carbon Calculator** — hitung emisi harian berdasarkan jarak tempuh kendaraan, jam AC, dan jam laptop
@@ -29,16 +29,18 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
 ## Struktur Project
-project-root/
-├── app.js               # Express Server (Pusat kendali backend)
+
+```
+eco-track-project/
+├── app.js               # Express server (pusat kendali backend)
 ├── package.json         # Metadata & daftar library (Express)
+├── README.md            # Panduan project
 └── public/              # Folder file statis yang diakses user
-    ├── background.jpg   # Gambar yang dipakai
     ├── index.html       # Halaman utama aplikasi
     ├── main.js          # Logika kalkulator & manipulasi DOM
     ├── style.css        # Desain dan tata letak aplikasi
-    └── pages/           # Folder halaman tambahan (jika ada)
-
+    └── background.jpg   # Gambar background
+```
 
 ## Tantangan yang Dihadapi
-Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic javascript nya karena masih belum familiar untuk saya, oleh karena itu saya menonton video youtube, bertanya pada AI, bertanya pada teman tentang logic javacsriptnya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an. 
+Tantangan terbesar adalah memisahkan logika dua progress bar yang berbeda — bar kalkulator (harian, reset tiap sesi) dan bar landing page (bulanan, terakumulasi). Solusinya dengan menyimpan riwayat emisi sebagai array di localStorage dan memfilternya berdasarkan bulan berjalan menggunakan `getBulanTahunSekarang()`. Selain itu, bug fungsi duplikat `updateBarKalkulator` yang menyebabkan variabel tidak terdefinisi juga menjadi pelajaran penting tentang pentingnya menjaga kode tetap bersih dan terstruktur. Selain tantangan utama tersebut saya juga kesusahan dalam penggunaan logic JavaScript karena masih belum familiar untuk saya, oleh karena itu saya menonton video YouTube, bertanya pada AI, dan bertanya pada teman tentang logic JavaScript-nya. Untuk saya yang pengetahuan tentang web ini masih pemula, mengerjakan project ini benar-benar membantu saya mendapatkan banyak ilmu dalam dunia per web-an.
