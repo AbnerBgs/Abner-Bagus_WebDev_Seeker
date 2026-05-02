@@ -28,6 +28,7 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Data Persistence** — input dan centang action plan tersimpan di localStorage, tidak hilang saat reload
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
+## Struktur Project
 project-root/
 ├── app.js               # Express Server (Pusat kendali backend)
 ├── package.json         # Metadata & daftar library (Express)
