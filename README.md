@@ -29,14 +29,17 @@ Banyak orang tidak menyadari seberapa besar kontribusi aktivitas sehari-hari mer
 - **Responsive Design** — tampilan menyesuaikan untuk mobile dan desktop
 
 ## Struktur Project
-project-root/
-├── app.js               # Express Server (Pusat kendali backend)
-├── package.json         # Metadata & daftar library (Express)
-└── public/              # Folder file statis yang diakses user
-    ├── background.jpg   # Gambar yang dipakai
-    ├── index.html       # Halaman utama aplikasi
-    ├── main.js          # Logika kalkulator & manipulasi DOM
-    ├── style.css        # Desain dan tata letak aplikasi
+eco-track-project/
+├── app.js                  # Backend server (Express.js)
+├── package.json            # Metadata & daftar library (Express)
+├── README.md               # Penjelasan project
+├── public/                 # Folder static files
+|   ├── background.jpg      # Gambar yang dipakai
+│   ├── index.html          # Halaman utama/home
+│   ├── main.js             # JavaScript utama untuk logika
+│   ├── style.css           # CSS custom
+
+
 
 
 ## Tantangan yang Dihadapi
